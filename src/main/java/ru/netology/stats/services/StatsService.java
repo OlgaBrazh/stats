@@ -42,7 +42,7 @@ public class StatsService {
 
     public int lowerMiddle(long[] sales) {
         long amount = amountSales(sales);
-        long amountAverage = amount / sales.length;
+        long amountAverage = amountSalesAverage(sales);
         int counter = 0;
         for (long s : sales) {
             if (s < amountAverage) {
@@ -54,7 +54,7 @@ public class StatsService {
 
     public int upperMiddle(long[] sales) {
         long amount = amountSales(sales);
-        long amountAverage = amount / sales.length;
+        long amountAverage = amountSalesAverage(sales);
         int counter = 0;
         for (long s : sales) {
             if (s > amountAverage) {
