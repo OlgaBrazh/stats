@@ -10,14 +10,11 @@ public class StatsService {
     }
 
     public long amountSalesAverage(long[] sales) {
-        long amount = 0;
-        long amountAverage = 0;
-        for (long s : sales) {
-            amount = amount + s;
-            amountAverage = amount / sales.length;
-        }
+        long amount = amountSales(sales);
+        long amountAverage = amount / sales.length;
         return amountAverage;
     }
+
 
     public int maxSales(long[] sales) {
         int maxMonth = 0;
@@ -44,13 +41,9 @@ public class StatsService {
     }
 
     public int lowerMiddle(long[] sales) {
-        long amount = 0;
-        long amountAverage = 0;
+        long amount = amountSales(sales);
+        long amountAverage = amount / sales.length;
         int counter = 0;
-        for (long s : sales) {
-            amount = amount + s;
-            amountAverage = amount / sales.length;
-        }
         for (long s : sales) {
             if (s < amountAverage) {
                 counter++;
@@ -60,13 +53,9 @@ public class StatsService {
     }
 
     public int upperMiddle(long[] sales) {
-        long amount = 0;
-        long amountAverage = 0;
+        long amount = amountSales(sales);
+        long amountAverage = amount / sales.length;
         int counter = 0;
-        for (long s : sales) {
-            amount = amount + s;
-            amountAverage = amount / sales.length;
-        }
         for (long s : sales) {
             if (s > amountAverage) {
                 counter++;
